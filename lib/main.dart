@@ -1,5 +1,5 @@
-import 'package:nexiamoe_eighteen/global/PublicDrawer.dart';
-import 'package:nexiamoe_eighteen/screen/newUpload.dart';
+import 'package:himena/global/PublicDrawer.dart';
+import 'package:himena/screen/newUpload.dart';
 import 'package:flutter/material.dart';
 
 void main() {

@@ -1,5 +1,5 @@
 // ignore_for_file: file_names
-import 'package:nexiamoe_eighteen/screen/newUpload.dart';
+import 'package:himena/screen/newUpload.dart';
 import 'package:flutter/material.dart';
 
 import '../screen/trending.dart';

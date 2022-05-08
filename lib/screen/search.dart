@@ -1,6 +1,6 @@
 // ignore_for_file: file_names, non_constant_identifier_names
 import 'package:flutter/services.dart';
-import 'package:nexiamoe_eighteen/service/api_service.dart';
+import 'package:himena/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 

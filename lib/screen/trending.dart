@@ -1,7 +1,7 @@
 // ignore_for_file: non_constant_identifier_names
 
-import 'package:nexiamoe_eighteen/screen/search.dart';
-import 'package:nexiamoe_eighteen/service/api_service.dart';
+import 'package:himena/screen/search.dart';
+import 'package:himena/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
