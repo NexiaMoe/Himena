@@ -4,8 +4,8 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-// var IP = "103.147.32.54";
-var IP = "192.168.5.254";
+var IP = "api.nexia.moe";
+// var IP = "192.168.5.254";
 
 class NewRelease {
   final int id;
@@ -70,7 +70,7 @@ class DetailHenti {
 
 class GetNR {
   static Future<List<NewRelease>> getNewRelease() async {
-    var data = await http.get(Uri.parse("http://$IP:5000/new"));
+    var data = await http.get(Uri.parse("https://$IP/new"));
     var jsonData = json.decode(data.body);
     List<NewRelease> name = [];
 
@@ -88,7 +88,7 @@ class GetNR {
 
 class GetTrending {
   static Future<List<NewRelease>> getTrending() async {
-    var data = await http.get(Uri.parse("http://$IP:5000/trending"));
+    var data = await http.get(Uri.parse("https://$IP/trending"));
     var jsonData = json.decode(data.body);
     List<NewRelease> name = [];
 
@@ -119,7 +119,7 @@ var total = 0;
 
 class GetSearch {
   static Future<List<NewRelease>> getSearch(String query, int page) async {
-    final url = Uri.parse('http://$IP:5000/search?text=$query&page=$page');
+    final url = Uri.parse('https://$IP/search?text=$query&page=$page');
     final response = await http.get(url);
     var jsonData = json.decode(response.body);
     List<NewRelease> name = [];
