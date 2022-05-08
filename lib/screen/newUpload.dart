@@ -1,4 +1,5 @@
 // ignore_for_file: file_names, non_constant_identifier_names
+import 'package:nexiamoe_eighteen/screen/search.dart';
 import 'package:nexiamoe_eighteen/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -30,6 +31,19 @@ class _NewUpload extends State<NewUpload> {
       child: Scaffold(
         appBar: AppBar(
           title: const Text("New Release"),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (a, b, c) => const Search(),
+                    ));
+              },
+              icon: const Icon(Icons.search),
+            )
+          ],
+          centerTitle: true,
         ),
         drawer: const PublicDrawer(),
         body: Center(

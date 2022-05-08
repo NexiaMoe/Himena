@@ -1,5 +1,6 @@
 // ignore_for_file: non_constant_identifier_names
 
+import 'package:nexiamoe_eighteen/screen/search.dart';
 import 'package:nexiamoe_eighteen/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
@@ -30,7 +31,20 @@ class _Trending extends State<Trending> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: const Text("Trending on Hanime"),
+          title: const Text("Trending Hentai"),
+          actions: [
+            IconButton(
+              onPressed: () {
+                Navigator.pushReplacement(
+                    context,
+                    PageRouteBuilder(
+                      pageBuilder: (a, b, c) => const Search(),
+                    ));
+              },
+              icon: const Icon(Icons.search),
+            )
+          ],
+          centerTitle: true,
         ),
         drawer: const PublicDrawer(),
         body: Center(

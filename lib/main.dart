@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       title: 'NexiaMoe EighTeen',
       theme: ThemeData.dark(),
       home: const MyHomePage(title: 'NexiaMoe EighTeen'),
+      debugShowCheckedModeBanner: false,
     );
   }
 }
@@ -37,9 +38,6 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-      drawer: PublicDrawer(),
-      body: NewUpload(),
-    );
+    return const NewUpload();
   }
 }

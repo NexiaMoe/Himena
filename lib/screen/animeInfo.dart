@@ -63,7 +63,7 @@ class _InfoDetail extends State<InfoDetail> {
                   ),
                   Padding(
                     padding: const EdgeInsets.fromLTRB(10, 10, 10, 0),
-                    child: IntrinsicHeight(
+                    child: SingleChildScrollView(
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.start,
                         crossAxisAlignment: CrossAxisAlignment.start,

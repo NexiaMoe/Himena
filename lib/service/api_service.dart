@@ -114,6 +114,34 @@ class GetInfo {
   }
 }
 
+var pages = 0;
+var total = 0;
+
+class GetSearch {
+  static Future<List<NewRelease>> getSearch(String query, int page) async {
+    final url = Uri.parse('http://$IP:5000/search?text=$query&page=$page');
+    final response = await http.get(url);
+    var jsonData = json.decode(response.body);
+    List<NewRelease> name = [];
+    for (var u in jsonData['data']) {
+      NewRelease names = NewRelease(u['id'], u['name'], u['cover_url']);
+      name.add(names);
+    }
+    if (kDebugMode) {
+      print(name.length);
+    }
+    pages = jsonData['total_page'];
+    total = jsonData['results'];
+    // print(name);
+    return name;
+  }
+
+  static getTotal() {
+    var a = {'total': total, 'pages': pages};
+
+    return a;
+  }
+}
   // factory NewRelease.createNewRelease(Map<String, dynamic> object) {
   //   return NewRelease(
   //       id: object['id'],
