@@ -105,7 +105,7 @@ class GetTrending {
 
 class GetInfo {
   static Future<DetailHenti> getDetail(int id) async {
-    var data = await http.get(Uri.parse("http://$IP:5000/anime?id=$id"));
+    var data = await http.get(Uri.parse("http://$IP/anime?id=$id"));
     if (data.statusCode == 200) {
       return DetailHenti.fromJson(jsonDecode(data.body));
     } else {
