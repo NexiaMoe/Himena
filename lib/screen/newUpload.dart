@@ -1,14 +1,13 @@
-import 'package:NexiaMoe_EighTeen/main.dart';
-import 'package:NexiaMoe_EighTeen/service/api_service.dart';
+// ignore_for_file: file_names, non_constant_identifier_names
+import 'package:nexiamoe_eighteen/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../global/PublicDrawer.dart';
 import 'animeInfo.dart';
 
 class NewUpload extends StatefulWidget {
-  NewUpload({Key? key}) : super(key: key);
+  const NewUpload({Key? key}) : super(key: key);
 
   @override
   _NewUpload createState() => _NewUpload();
@@ -30,9 +29,9 @@ class _NewUpload extends State<NewUpload> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("New Release"),
+          title: const Text("New Release"),
         ),
-        drawer: PublicDrawer(),
+        drawer: const PublicDrawer(),
         body: Center(
           child: FutureBuilder(
             future: _initreleaseData,
@@ -40,11 +39,11 @@ class _NewUpload extends State<NewUpload> {
               switch (snapshot.connectionState) {
                 case ConnectionState.none:
                   {
-                    return Center(child: Text("None"));
+                    return const Center(child: Text("None"));
                   }
                 case ConnectionState.waiting:
                   {
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   }
                 case ConnectionState.active:
                   {
@@ -114,19 +113,11 @@ class _NewUpload extends State<NewUpload> {
     _NewRelease = release;
   }
 
-  Future<void> _refreshPhotos() async {
-    final data = await GetNR.getNewRelease();
-
-    setState(() {
-      _NewRelease = data;
-    });
-  }
-
   Future<void> _test() async {
     Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          pageBuilder: (a, b, c) => NewUpload(),
+          pageBuilder: (a, b, c) => const NewUpload(),
         ));
     // setState(() {
     //   selectedIndex = 1;

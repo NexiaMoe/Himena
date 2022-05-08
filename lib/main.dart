@@ -1,11 +1,6 @@
-import 'package:NexiaMoe_EighTeen/global/PublicDrawer.dart';
-import 'package:NexiaMoe_EighTeen/screen/animeInfo.dart';
-import 'package:NexiaMoe_EighTeen/screen/newUpload.dart';
-import 'package:flutter/foundation.dart';
-import 'package:side_navigation/side_navigation.dart';
+import 'package:nexiamoe_eighteen/global/PublicDrawer.dart';
+import 'package:nexiamoe_eighteen/screen/newUpload.dart';
 import 'package:flutter/material.dart';
-import 'dart:io' show Platform;
-import 'service/api_service.dart';
 
 void main() {
   runApp(const MyApp());
@@ -42,7 +37,7 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       drawer: PublicDrawer(),
       body: NewUpload(),
     );

@@ -1,14 +1,14 @@
-import 'package:NexiaMoe_EighTeen/main.dart';
-import 'package:NexiaMoe_EighTeen/service/api_service.dart';
+// ignore_for_file: non_constant_identifier_names
+
+import 'package:nexiamoe_eighteen/service/api_service.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../global/PublicDrawer.dart';
 import 'animeInfo.dart';
 
 class Trending extends StatefulWidget {
-  Trending({Key? key}) : super(key: key);
+  const Trending({Key? key}) : super(key: key);
 
   @override
   _Trending createState() => _Trending();
@@ -30,9 +30,9 @@ class _Trending extends State<Trending> {
     return SafeArea(
       child: Scaffold(
         appBar: AppBar(
-          title: Text("Trending on Hanime"),
+          title: const Text("Trending on Hanime"),
         ),
-        drawer: PublicDrawer(),
+        drawer: const PublicDrawer(),
         body: Center(
           child: FutureBuilder(
             future: _initreleaseData,
@@ -40,11 +40,11 @@ class _Trending extends State<Trending> {
               switch (snapshot.connectionState) {
                 case ConnectionState.none:
                   {
-                    return Center(child: Text("None"));
+                    return const Center(child: Text("None"));
                   }
                 case ConnectionState.waiting:
                   {
-                    return Center(child: CircularProgressIndicator());
+                    return const Center(child: CircularProgressIndicator());
                   }
                 case ConnectionState.active:
                   {
@@ -114,19 +114,11 @@ class _Trending extends State<Trending> {
     _NewRelease = release;
   }
 
-  Future<void> _refreshPhotos() async {
-    final data = await GetTrending.getTrending();
-
-    setState(() {
-      _NewRelease = data;
-    });
-  }
-
   Future<void> _test() async {
     Navigator.pushReplacement(
         context,
         PageRouteBuilder(
-          pageBuilder: (a, b, c) => Trending(),
+          pageBuilder: (a, b, c) => const Trending(),
         ));
     // setState(() {
     //   selectedIndex = 1;

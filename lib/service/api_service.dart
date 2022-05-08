@@ -96,7 +96,9 @@ class GetTrending {
       NewRelease names = NewRelease(u['id'], u['name'], u['cover']);
       name.add(names);
     }
-    print(name.length);
+    if (kDebugMode) {
+      print(name.length);
+    }
     return name;
   }
 }

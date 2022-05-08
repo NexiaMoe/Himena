@@ -1,6 +1,7 @@
-// ignore: file_names
+// ignore_for_file: file_names
+
 import 'package:flutter/material.dart';
-import 'package:NexiaMoe_EighTeen/service/api_service.dart';
+import 'package:nexiamoe_eighteen/service/api_service.dart';
 import 'package:video_viewer/video_viewer.dart';
 import 'dart:io' show Platform;
 

@@ -1,12 +1,11 @@
-import 'package:NexiaMoe_EighTeen/screen/newUpload.dart';
-import 'package:NexiaMoe_EighTeen/service/api_service.dart';
+// ignore_for_file: file_names
+import 'package:nexiamoe_eighteen/screen/newUpload.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 import '../screen/trending.dart';
 
 class PublicDrawer extends StatefulWidget {
-  PublicDrawer({Key? key}) : super(key: key);
+  const PublicDrawer({Key? key}) : super(key: key);
 
   @override
   _PublicDrawerState createState() => _PublicDrawerState();
@@ -37,7 +36,7 @@ class _PublicDrawerState extends State<PublicDrawer> {
             Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (a, b, c) => NewUpload(),
+                  pageBuilder: (a, b, c) => const NewUpload(),
                 ));
           },
         ),
@@ -48,7 +47,7 @@ class _PublicDrawerState extends State<PublicDrawer> {
             Navigator.pushReplacement(
                 context,
                 PageRouteBuilder(
-                  pageBuilder: (a, b, c) => Trending(),
+                  pageBuilder: (a, b, c) => const Trending(),
                 ));
           },
         ),
