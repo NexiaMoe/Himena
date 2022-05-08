@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="nexia.moe.hemina">
+    package="nexia.moe.himena">
     <uses-permission android:name="android.permission.INTERNET" />
    <application
-        android:label="Hemina"
+        android:label="himena"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -4,7 +4,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:http/http.dart' as http;
 
-var IP = "api.nexia.moe/hemina";
+var IP = "api.nexia.moe/himena";
 // var IP = "192.168.5.254";
 
 class NewRelease {

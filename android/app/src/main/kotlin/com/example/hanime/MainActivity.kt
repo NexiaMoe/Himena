@@ -1,4 +1,4 @@
-package nexia.moe.hemina
+package nexia.moe.himena
 
 import io.flutter.embedding.android.FlutterActivity
 
